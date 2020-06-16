@@ -3,7 +3,8 @@
     var secondValue = parseFloat(document.getElementById("SecondValue").value);
     var operation = document.getElementById("Operation").value;
     var data = {};
-    data.expression = firstValue + operation + secondValue;
+
+    data.expression = firstValue + ' ' + operation + ' ' + secondValue;
 
     $.ajax({
         url: 'api/calc',
