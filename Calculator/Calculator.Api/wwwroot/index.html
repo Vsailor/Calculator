@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <script src="scripts/calcServices.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div>
+        <input type="text" id="FirstValue" />
+        <select id="Operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="SecondValue" />
+        =
+        <input type="text" id="ResultValue" />
+        <input type="button" id="CountButton" value="Count" onclick="calculate()"/>
+    </div>
+</body>
+</html>
