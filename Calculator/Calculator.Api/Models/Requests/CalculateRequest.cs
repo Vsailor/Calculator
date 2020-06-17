@@ -1,7 +1,13 @@
-﻿namespace Calculator.Api.Models.Requests
+﻿using Calculator.Api.Models.Enums;
+
+namespace Calculator.Api.Models.Requests
 {
     public class CalculateRequest
     {
-        public string Expression { get; set; }
+        public double FirstValue { get; set; }
+
+        public double SecondValue { get; set; }
+
+        public OperationType Operation { get; set; }
     }
 }

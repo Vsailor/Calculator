@@ -1,10 +1,23 @@
 ﻿function calculate() {
-    var firstValue = parseFloat(document.getElementById("FirstValue").value);
-    var secondValue = parseFloat(document.getElementById("SecondValue").value);
-    var operation = document.getElementById("Operation").value;
     var data = {};
+    data.firstValue = parseFloat(document.getElementById("FirstValue").value);
+    data.secondValue = parseFloat(document.getElementById("SecondValue").value);
+    var operation = document.getElementById("Operation").value;
 
-    data.expression = firstValue + ' ' + operation + ' ' + secondValue;
+    switch (operation) {
+        case "+":
+            data.operation = "Add";
+            break;
+        case "-":
+            data.operation = "Sub";
+            break;
+        case "*":
+            data.operation = "Mult";
+            break;
+        case "/":
+            data.operation = "Div";
+            break;
+    }
 
     $.ajax({
         url: 'api/calc',

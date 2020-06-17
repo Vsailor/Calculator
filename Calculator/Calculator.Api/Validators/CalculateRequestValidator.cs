@@ -1,4 +1,5 @@
-﻿using Calculator.Api.Models.Requests;
+﻿using Calculator.Api.Models.Enums;
+using Calculator.Api.Models.Requests;
 using FluentValidation;
 
 namespace Calculator.Api.Validators
@@ -7,8 +8,8 @@ namespace Calculator.Api.Validators
     {
         public CalculateRequestValidator()
         {
-            RuleFor(x => x.Expression)
-                .NotNull();
+            RuleFor(x => x.Operation)
+                .Must(x => x != OperationType.Unknown);
         }
     }
 }
